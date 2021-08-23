@@ -21,3 +21,8 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+.idea
+wp-admin
+wp-includes
+.DS_Store
