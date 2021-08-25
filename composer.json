@@ -1,0 +1,17 @@
+{
+  "name": "vendor_name/stock-advisor",
+  "description": "This is the dev env for StockAdvisor theme",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "David Jarrin",
+      "email": "dmjarrin@gmail.com"
+    }
+  ],
+  "scripts": {
+    "phpcs": "phpcs --standard=PSR4"
+  },
+  "require": {
+  }
+}
