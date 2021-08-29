@@ -13,5 +13,6 @@
     "phpcs": "phpcs --standard=PSR4"
   },
   "require": {
+    "ext-json": "*"
   }
 }

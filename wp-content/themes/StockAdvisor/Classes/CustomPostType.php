@@ -50,16 +50,12 @@ class CustomPostType
             'labels'                => $this->labels,
             'public'                => true,
             'publicly_queryable'    => true,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'query_var'             => true,
-            'rewrite'               => array( 'slug' => $this->slug ),
+            'rewrite'               => array( 'slug' => $this->slug , 'with_front' => false ),
             'capability_type'       => 'post',
             'has_archive'           => true,
             'hierarchical'          => true,
             'menu_position'         => 8,
             'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail'),
-            'yarpp_support'         => true
         );
 
         $this->args = array_replace($argsDefault, $args);
@@ -68,6 +64,7 @@ class CustomPostType
     public function register()
     {
         register_post_type( $this->type, $this->args );
+        flush_rewrite_rules();
     }
 
     public function set_columns($columns) {
