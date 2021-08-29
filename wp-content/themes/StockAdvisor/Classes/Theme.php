@@ -21,13 +21,14 @@ class Theme
         $newsArticleCPT = new CustomPostType('news', 'news', 'News', 'News', ['show_in_rest'=> true]);
         $newsArticleCPT->register();
 
-        $stockRecommendationCPT = new CustomPostType('recommendation', 'stock-recommendations', 'Stock Recommendations', 'Stock Recommendation');
+        //post name has to be between 1-20 characters long so type has to be the singular name but the plural makes more sense for the slug (a tad confusing)
+        $stockRecommendationCPT = new CustomPostType('stock-recommendation', 'stock-recommendations', 'Stock Recommendations', 'Stock Recommendation');
         $stockRecommendationCPT->register();
     }
 
     private function registerTaxonomies()
     {
-        new CustomTaxonomy('stocks', 'stocks', 'Stocks', 'Stock', ['news', 'recommendation']);
+        new CustomTaxonomy('stocks', 'stocks', 'Stocks', 'Stock', ['news', 'stock-recommendation']);
     }
 
     public function registerCustomSidebars()
