@@ -28,7 +28,7 @@ class Theme
 
     private function registerTaxonomies()
     {
-        new CustomTaxonomy('stocks', 'stocks', 'Stocks', 'Stock', ['news', 'stock-recommendation']);
+        new CustomTaxonomy('stocks', 'stocks', 'Stocks', 'Stock', ['news', 'stock-recommendation', 'post']); //added to posts just to demonstrate Story #4 task 5
     }
 
     public function registerCustomSidebars()
