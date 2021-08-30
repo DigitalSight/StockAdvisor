@@ -1,9 +1,15 @@
 <?php
 
+/**
+ * Client for Retrieving FMP Stock Data
+ */
 class FMPClient
 {
     const baseURL = 'https://financialmodelingprep.com/api/v3';
 
+    /**
+     * @var $apiKey String
+     */
     private $apiKey;
 
     public function __construct()
@@ -11,18 +17,31 @@ class FMPClient
         $this->setApiKey();
     }
 
+    /**
+     * Retrieves ticket profile information. For specifics check docs https://financialmodelingprep.com/developer/docs/companies-key-stats-free-api
+     * @param string $ticker
+     * @return array|mixed|WP_Error
+     */
     public function getCompanyProfile(string $ticker)
     {
         $context = '/profile/' . $ticker;
         return $this->_get($context);
     }
 
+    /**
+     * Retrieves ticket quote information. For specifics check docs https://financialmodelingprep.com/developer/docs/stock-api
+     * @param string $ticker
+     * @return array|mixed|WP_Error
+     */
     public function getCompanyQuote(string $ticker)
     {
         $context = '/quote/' . $ticker;
         return $this->_get($context);
     }
 
+    /**
+     * Setter for apiKey property
+     */
     private function setApiKey()
     {
         //Later will be replaced by getting the value from settings page

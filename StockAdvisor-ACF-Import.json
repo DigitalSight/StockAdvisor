@@ -1,0 +1,63 @@
+[
+  {
+    "key": "group_6125a96a40be6",
+    "title": "Stock Taxonomy Fields",
+    "fields": [
+      {
+        "key": "field_6127f999ed897",
+        "label": "Exchange",
+        "name": "exchange",
+        "type": "text",
+        "instructions": "The exchange the stock trades on",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "NYSE",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6125a97d2002d",
+        "label": "Symbol",
+        "name": "symbol",
+        "type": "text",
+        "instructions": "Enter the stocks symbol",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "AAPL",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "taxonomy",
+          "operator": "==",
+          "value": "stocks"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+  }
+]

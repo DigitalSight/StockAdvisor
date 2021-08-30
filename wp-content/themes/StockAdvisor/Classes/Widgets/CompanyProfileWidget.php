@@ -19,13 +19,6 @@ class Company_Profile_Widget extends WP_Widget
         });
     }
 
-    public $args = array(
-        'before_title'  => '<h4 class="widgettitle">',
-        'after_title'   => '</h4>',
-        'before_widget' => '<div class="widget-wrap">',
-        'after_widget'  => '</div></div>'
-    );
-
     public function widget($args, $instance)
     {
        //dependency check to determine if ACF is present
@@ -41,39 +34,41 @@ class Company_Profile_Widget extends WP_Widget
                 if($symbol) {
                     $client = new FMPClient();
                     $companyData = $client->getCompanyProfile($symbol);
-                    if(count($companyData) > 0) {
+                    if(!is_wp_error($companyData) AND count($companyData) > 0) {
                         $data = reset($companyData);
                         ?>
-                            <table>
-                                <th colspan="2">
+                            <table class="profile-widget-table">
+                                <th colspan="2" class="center-content">
                                     <image src="<?php echo $data["image"] ?>"></image>
                                 </th>
                                 <tr>
-                                    <td>Company Name</td>
+                                    <td class="bold-title">Company Name</td>
                                     <td><?php echo $data["companyName"] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Exchange</td>
+                                    <td class="bold-title">Exchange</td>
                                     <td><?php echo $data["exchangeShortName"] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Description</td>
-                                    <td><?php echo $data["description"] ?></td>
+                                    <td class="bold-title center-content" colspan="2">Description</td>
                                 </tr>
                                 <tr>
-                                    <td>Industry</td>
+                                    <td colspan="2" ><?php echo $data["description"] ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold-title">Industry</td>
                                     <td><?php echo $data["industry"] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Sector</td>
+                                    <td class="bold-title">Sector</td>
                                     <td><?php echo $data["sector"] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>CEO</td>
+                                    <td class="bold-title">CEO</td>
                                     <td><?php echo $data["ceo"] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Website</td>
+                                    <td class="bold-title">Website</td>
                                     <td><a href="<?php echo $data["website"] ?>"><?php echo $data["website"] ?></a></td>
                                 </tr>
                             </table>
