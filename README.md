@@ -22,8 +22,13 @@
 5) Go to Settings > Permalinks and choose the "Post name" setting then press save
 6) Navigate to Appearance > Widgets
    1) Select the "Company Profile Widget" and place it in the "Stock Recommendation Sidebar"
+7) (not necessary but nice to have) navigate to the user you created and update "Nickname" save then switch "Display name Publicly as" to new value
 ### Theme Instructions
 The only special instructions for posting articles for this theme is that you have to add the "Stocks" taxonomies before
 posting articles.
 This can be done by navigating to admin panel > (News or Stock recommendations) > click on "Stocks" sub-menu and fill out the form
 to add a new stock.
+
+### Pages of Interest for evaluators
+- Stocks Recommendation Archive page {baseURL}/stock-recommendations/
+- Company Page {baseURL}/stocks/{stock slug}

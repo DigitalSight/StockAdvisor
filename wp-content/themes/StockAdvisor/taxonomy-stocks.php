@@ -10,8 +10,8 @@ get_header();
 if (!class_exists('ACF')) {
 ?><h3>Page Not Available</h3><?php
     return;
-}
-if ( have_posts() ) : ?>
+} ?>
+
     <header class="page-header">
         <?php
         $ticker = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
@@ -148,6 +148,5 @@ if ( have_posts() ) : ?>
         </main><!-- #main -->
     </div><!-- #primary -->
 </div><!-- .wrap -->
-<?php endif; ?>
 
 
