@@ -2,6 +2,9 @@
 
 namespace Classes;
 
+/**
+ * Class that is used in order to generate a custom post type
+ */
 class CustomPostType
 {
     private $type;
@@ -11,6 +14,13 @@ class CustomPostType
     private $args;
     private $labels;
 
+    /**
+     * @param string $type
+     * @param string $slug
+     * @param string $name
+     * @param string $singular_name
+     * @param array|null $args
+     */
     public function __construct(string $type, string $slug, string $name, string $singular_name, ?array $args = [])
     {
         $this->type             = $type;
@@ -64,16 +74,18 @@ class CustomPostType
     public function register()
     {
         register_post_type( $this->type, $this->args );
-        flush_rewrite_rules();
     }
 
+    /**
+     * Sets admin columns
+     * @param $columns
+     * @return mixed
+     */
     public function set_columns($columns) {
-        // Set/unset post type table columns here
-
         return $columns;
     }
 
-    public function edit_columns($column, $post_id) {
-        // Post type table column content code here
-    }
+//    public function edit_columns($column, $post_id) {
+//        // Post type table column content code here
+//    }
 }

@@ -6,3 +6,40 @@ Author URI: https://github.com/djarrin
 Description: Stock Advisor is a service that provides members 2 stock recommendations per month as well as news articles about stocks that have been recommended in the past.
 Version: 0.1
 */
+
+.bold-title {
+    font-weight: 700;
+}
+
+div.content-area .site-main article .entry-content {
+    float: unset;
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+/**
+Company Profile Widget Styles
+ */
+
+table.profile-widget-table .center-content {
+    text-align: center;
+}
+/* End of Company Profile Widget Styles*/
+
+
+ul.more-content-list {
+    list-style: none;
+    margin-left: 0;
+}
+ul.more-content-list li h3 {
+    font-size: 1.7em;
+    text-decoration: underline;
+}
+
+/**
+Single Stocks Taxonomy page
+ */
+body.tax-stocks header {
+    margin-bottom: 0;
+}

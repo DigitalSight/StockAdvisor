@@ -19,10 +19,9 @@ get_header(); ?>
                         <?php the_content(); ?>
                     </div>
                 </article>
-            <?php endwhile; /* Start the Loop */ ?>
+            <?php endwhile; /* End the Loop */ ?>
             </main><!-- #main -->
         </div><!-- #primary -->
-        <?php get_sidebar(); ?>
     </div><!-- .wrap -->
 
 <?php

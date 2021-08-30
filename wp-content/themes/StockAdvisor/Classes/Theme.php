@@ -5,6 +5,9 @@ include_once dirname( __FILE__ ) . '/CustomPostType.php';
 include_once dirname( __FILE__ ) . '/CustomTaxonomy.php';
 include_once dirname( __FILE__ ) . '/Widgets/CompanyProfileWidget.php';
 
+/**
+ * Class for centralized functionality of the theme
+ */
 class Theme
 {
     public function __construct()

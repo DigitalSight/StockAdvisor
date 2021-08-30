@@ -2,6 +2,9 @@
 
 namespace Classes;
 
+/**
+ * Class that is used in order to generate a custom taxonomy
+ */
 class CustomTaxonomy
 {
     private $type;
@@ -12,6 +15,14 @@ class CustomTaxonomy
     private $labels;
     private $associatedCPT;
 
+    /**
+     * @param string $type
+     * @param string $slug
+     * @param string $name
+     * @param string $singular_name
+     * @param array $associatedCPT
+     * @param array|null $args
+     */
     public function __construct(string $type, string $slug, string $name, string $singular_name, array $associatedCPT, ?array $args = [])
     {
         $this->type             = $type;
